@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Veterinaria</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            margin-bottom: 20px;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #4CAF50;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        .service {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .service h3 {
+            margin-top: 0;
+        }
+        .service p {
+            margin-bottom: 10px;
+        }
+        .button-container {
+            text-align: center;
+        }
+        .button-container a {
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 0 10px;
+            display: inline-block;
+        }
+        .button-container a:hover {
+            background-color: #45a049;
+        }
+        .form-container {
+            margin-bottom: 20px;
+        }
+        .form-container form {
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h3 {
+            text-align: center;
+        }
+        .form-container label, .form-container input, .form-container textarea {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .form-container input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .form-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Clínica Veterinaria "AIKO"</h1>
+    </header>
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#">Nosotros</a>
+        <a href="#">Contacto</a>
+    </nav>
+
+    <div class="form-container">
+        <h3>Iniciar Sesión</h3>
+        <form action="login.php" method="POST">
+            <label for="usuario">Usuario:</label>
+            <input type="text" id="usuario" name="usuario" required>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="submit" value="Iniciar Sesión">
+        </form>
+    </div>
+
+    <div class="container">
+        <div class="image-container">
+            <img src="Clinica veterinaria.png" alt="Clínica Veterinaria">
+        </div>
+        <h2>Bienvenido a nuestra Clínica Veterinaria</h2>
+        <p>Somos una clínica veterinaria comprometida con la salud y bienestar de tus mascotas. Nuestro equipo de profesionales está aquí para ofrecer una atención integral y personalizada. Con más de X años de experiencia, nos dedicamos a proporcionar servicios de alta calidad.</p>
+        
+        <h3 id="servicios">Nuestros Servicios</h3>
+        
+        <div class="service">
+            <img src="consulta.jpg" alt="Consulta Veterinaria">
+            <h3>Consulta Veterinaria</h3>
+            <p>Realizamos revisiones médicas exhaustivas para diagnosticar y tratar cualquier problema de salud. Nuestros veterinarios están disponibles para ofrecer consultas personalizadas.</p>
+            <div class="button-container">
+                <a href="agendar_cita.php">Agendar Consulta</a>
+                <a href="contacto.php">Más Información</a>
+            </div>
+        </div>
+        
+        <div class="service">
+            <img src="vacunacion.png" alt="Vacunación">
+            <h3>Vacunación</h3>
+            <p>Mantenemos al día las vacunas de tu mascota para prevenir enfermedades. Nuestros especialistas te asesorarán sobre el calendario de vacunación adecuado para tu mascota.</p>
+            <div class="button-container">
+                <a href="agendar_cita.php">Agendar Vacunación</a>
+                <a href="servicios.php#vacunacion">Más Detalles</a>
+            </div>
+        </div>
+        
+        <div class="service">
+            <img src="cirugia.jpg" alt="Cirugía">
+            <h3>Cirugía</h3>
+            <p>Contamos con un quirófano equipado para realizar intervenciones quirúrgicas con la máxima seguridad. Nuestros veterinarios están entrenados para realizar procedimientos quirúrgicos complejos.</p>
+            <div class="button-container">
+                <a href="agendar_cirugia.php">Agendar Cirugía</a>
+                <a href="servicios.php#cirugia">Detalles de Procedimientos</a>
+            </div>
+        </div>
+        
+        <div class="service">
+            <img src="peluqueria.jpg" alt="Estética y Peluquería">
+            <h3>Estética y Peluquería</h3>
+            <p>Ofrecemos servicios de peluquería y cuidado estético para mantener a tu mascota saludable y feliz. Nuestros estilistas están capacitados para realizar cortes de pelo y cuidados específicos según las necesidades de tu mascota.</p>
+            <div class="button-container">
+                <a href="agendar_peluqueria.php">Agendar Peluquería</a>
+                <a href="servicios.php#estetica">Detalles de Estética</a>
+            </div>
+        </div>
+        
+        <div class="service">
+            <img src="guarderia.jpg" alt="Guardería y Hospedaje">
+            <h3>Guardería y Hospedaje</h3>
+            <p>Brindamos cuidados y alojamiento seguro para tu mascota cuando lo necesites. Nuestro personal está entrenado para cuidar a tu mascota y proporcionarle un entorno cómodo y seguro.</p>
+            <div class="button-container">
+                <a href="reservar_hospedaje.php">Reservar Hospedaje</a>
+                <a href="servicios.php#guarderia">Más Información</a>
+            </div>
+        </div>
+        
+        <div class="service">
+            <img src="atencion.jpg" alt="Atención Especializada">
+            <h3>Atención Especializada</h3>
+            <p>Nos especializamos en el tratamiento de enfermedades específicas y en cuidados intensivos. Nuestros veterinarios cuentan con la experiencia y los recursos necesarios para brindar atención especializada a tu mascota.</p>
+            <div class="button-container">
+                <a href="agendar_consulta.php">Agendar Consulta Especializada</a>
+                <a href="servicios.php#especializada">Más Detalles</a>
+            </div>
+        </div>
+        
+        <h3>Horarios de Atención</h3>
+        <p>Estamos disponibles de lunes a viernes de 9:00 am a 6:00 pm. Sábados de 9:00 am a 2:00 pm. Domingos cerrados.</p>
+        <h3>Contactanos</h3>
+        <p>Correo electronico: veterinariaaiko1234@gmail.com<p>Numero telefonico: 5525750998</p>
+           
+     
+        
+        <div class="form-container">
+            <h3>Agendar Cita</h3>
+            <form action="procesar_cita.php" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+
+                <label for="correo">correo:</label>
+                <input type="correo" id="correo" name="correo" required>
+
+                <label for="Direccion">Direccion:</label>
+                <input type="Direccion" id="Direccion" name="Direccion" required>
+
+                <label for="fecha">Fecha de cita:</label>
+                <input type="date" id="fecha" name="fecha" required>
+
+                <label for="nombre de la mascota ">Nombre de la mascota :</label>
+                <input type="text" id="nombre de la mascota " name="nombre de la mascota " required>
+
+                <label for="tipo de mascota">tipo de mascota :</label>
+                <input type="text" id="tipo de mascota " name="tipo de mascota " required>
+
+                <label for="edad de la mascota">edad de la mascota :</label>
+                <input type="number" id="edad de la mascota" name="edad de la mascota" required>
+
+                <label for="mensaje">Mensaje adicional:</label>
+                <textarea id="mensaje" name="mensaje"></textarea>
+
+                <input type="submit" value="Enviar Cita">
+            </form>
+        </div>
+        <script>
+            let carrito = []; // Array para almacenar los productos en el carrito
+            let totalCarrito = 0; // Variable para calcular el total del carrito
+        
+            function agregarAlCarrito(nombre, precio) {
+                // Objeto que representa un producto
+                let producto = {
+                    nombre: nombre,
+                    precio: precio
+                };
+        
+                // Agregar producto al carrito
+                carrito.push(producto);
+        
+                // Calcular el total del carrito
+                totalCarrito += precio;
+        
+                // Actualizar la interfaz del carrito
+                actualizarCarrito();
+            }
+        
+            function actualizarCarrito() {
+                // Seleccionar el elemento donde se mostrará el carrito
+                let carritoLista = document.getElementById('carrito-lista');
+                let carritoTotal = document.getElementById('carrito-total');
+        
+                // Limpiar el contenido previo del carrito
+                carritoLista.innerHTML = '';
+                
+                // Recorrer el array del carrito y mostrar cada producto
+                carrito.forEach(function(producto) {
+                    let item = document.createElement('li');
+                    item.textContent = `${producto.nombre} - Precio: $${producto.precio}`;
+                    carritoLista.appendChild(item);
+                });
+        
+                // Mostrar el total del carrito
+                carritoTotal.textContent = `$${totalCarrito}`;
+            }
+        </script>
+
+
+
+
+        <div class="service">
+            <img src="consulta monetaria.webp" alt="Consulta Veterinaria">
+            <h3>Consulta Veterinaria</h3>
+            <p>Realizamos revisiones médicas exhaustivas para diagnosticar y tratar cualquier problema de salud. Nuestros veterinarios están disponibles para ofrecer consultas personalizadas.</p>
+            <p class="price">Precio: $50</p> <!-- Ejemplo de precio --> <button onclick="agregarAlCarrito('Producto 1', 50)">Agregar al Carrito</button>
+            <p class="price">Precio por vacunacion: $150</p> <!-- Ejemplo de precio --> <button onclick="agregarAlCarrito('Producto 2', 150)">Agregar al Carrito</button>
+            <p class="price">Precio por cuidar a tu mascota: $200</p> <!-- Ejemplo de precio --> <button onclick="agregarAlCarrito('Producto 3', 200)">Agregar al Carrito</button>
+            <p class="price">Precio por Cirugía : $2500</p> <!-- Ejemplo de precio --> <button onclick="agregarAlCarrito('Producto 4', 2500)">Agregar al Carrito</button>
+            <p class="price">Precio por el servicio de peluqueria y estilista: $130</p> <!-- Ejemplo de precio --> <button onclick="agregarAlCarrito('Producto 5', 50)">Agregar al Carrito</button>
+            </div>
+            
+
+        </div>
+        
+
+    </div>
+    <footer>
+    </footer>
+</body>
+</html>
